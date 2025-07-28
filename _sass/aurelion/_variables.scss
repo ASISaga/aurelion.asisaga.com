@@ -10,12 +10,3 @@
   --aurelion-gradient-primary: linear-gradient(135deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
   --aurelion-gradient-accent: linear-gradient(135deg, var(--aurelion-gold) 0%, var(--aurelion-deep-gold) 100%);
 }
-
-@keyframes pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
-}
-@keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}

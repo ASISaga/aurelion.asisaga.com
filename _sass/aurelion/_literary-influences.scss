@@ -30,6 +30,7 @@
   text-align: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  @include fade-up;
 }
 .mentor-influence-card:hover {
   transform: translateY(-5px);
@@ -53,4 +54,8 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+.collection-header {
+    @include fade-up;
 }

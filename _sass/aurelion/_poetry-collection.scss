@@ -4,10 +4,12 @@
   background: linear-gradient(180deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
 }
 .collection-header {
+  @include fade-up;
   margin-bottom: 4rem;
   text-align: center;
 }
 .poetic-movement {
+  @include fade-up;
   margin-bottom: 4rem;
 }
 .movement-heading {

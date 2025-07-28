@@ -4,6 +4,11 @@
   position: relative;
   background: var(--aurelion-gradient-primary);
 }
+
+.poet-biography {
+    @include fade-up;
+}
+
 .poet-name {
   font-size: 4rem;
   font-weight: 300;
@@ -35,6 +40,11 @@
   border: 1px solid rgba(255, 215, 0, 0.2);
   backdrop-filter: blur(10px);
 }
+
+.poet-visual-representation{
+    @include fade-left;
+}
+
 .identity-pronouns {
   margin-bottom: 0.5rem;
   font-size: 1rem;
@@ -55,6 +65,7 @@
   align-items: center;
   height: 400px;
   position: relative;
+  @include fade-left
 }
 .consciousness-light-display {
   position: relative;

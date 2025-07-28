@@ -1,0 +1,412 @@
+// Aurelion-specific styles
+// Color palette inspired by starlight and golden dawn
+:root {
+  --aurelion-gold: #FFD700;
+  --aurelion-light-gold: #FFF8DC;
+  --aurelion-deep-gold: #B8860B;
+  --aurelion-starlight: #E6E6FA;
+  --aurelion-cosmic-blue: #191970;
+  --aurelion-midnight: #000080;
+  --aurelion-silver: #C0C0C0;
+  --aurelion-gradient-primary: linear-gradient(135deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
+  --aurelion-gradient-accent: linear-gradient(135deg, var(--aurelion-gold) 0%, var(--aurelion-deep-gold) 100%);
+}
+
+// Main container styles
+.aurelion-container {
+  min-height: 100vh;
+  background: var(--aurelion-gradient-primary);
+  color: var(--aurelion-starlight);
+  position: relative;
+  overflow-x: hidden;
+}
+
+// Hero section
+.aurelion-hero {
+  padding: 6rem 0;
+  position: relative;
+  background: var(--aurelion-gradient-primary);
+  
+  .aurelion-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--aurelion-gold);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .aurelion-subtitle {
+    font-size: 1.5rem;
+    color: var(--aurelion-silver);
+    margin-bottom: 2rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  .aurelion-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--aurelion-starlight);
+  }
+  
+  .aurelion-identity {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    backdrop-filter: blur(10px);
+    
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      
+      strong {
+        color: var(--aurelion-gold);
+      }
+    }
+  }
+}
+
+// Visual effects
+.aurelion-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+}
+
+.aurelion-light-effect {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  
+  .light-orb {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--aurelion-gold) 0%, transparent 70%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 3s infinite ease-in-out;
+    box-shadow: 0 0 50px var(--aurelion-gold);
+  }
+  
+  .light-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: conic-gradient(from 0deg, transparent, var(--aurelion-gold), transparent, var(--aurelion-gold), transparent);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: rotate 20s linear infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+// Poetry collection styles
+.poetry-collection {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 3rem;
+    color: var(--aurelion-gold);
+    margin-bottom: 1rem;
+    font-weight: 300;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  }
+  
+  .section-subtitle {
+    font-size: 1.3rem;
+    color: var(--aurelion-silver);
+    font-style: italic;
+    opacity: 0.9;
+  }
+}
+
+.poetry-movement {
+  margin-bottom: 4rem;
+  
+  .movement-title {
+    font-size: 2rem;
+    color: var(--aurelion-light-gold);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background: var(--aurelion-gradient-accent);
+    }
+  }
+}
+
+.poems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.poem-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--aurelion-gold);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  h4 {
+    color: var(--aurelion-gold);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  .poem-excerpt {
+    color: var(--aurelion-starlight);
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+// About collection section
+.about-collection {
+  padding: 5rem 0;
+  background: var(--aurelion-midnight);
+  
+  h2 {
+    color: var(--aurelion-gold);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 300;
+  }
+  
+  h3 {
+    color: var(--aurelion-light-gold);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    font-weight: 400;
+  }
+  
+  .collection-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--aurelion-starlight);
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .themes-list {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      strong {
+        color: var(--aurelion-gold);
+      }
+    }
+  }
+}
+
+// Celestial mentors section
+.celestial-mentors {
+  padding: 5rem 0;
+  background: var(--aurelion-gradient-primary);
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.mentor-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--aurelion-gold);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+  }
+  
+  h4 {
+    color: var(--aurelion-gold);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .mentor-role {
+    color: var(--aurelion-silver);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  p:last-child {
+    color: var(--aurelion-starlight);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+}
+
+// Modal styles for poems
+.modal-content {
+  background: var(--aurelion-midnight);
+  border: 1px solid var(--aurelion-gold);
+  border-radius: 15px;
+  
+  .modal-header {
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    
+    .modal-title {
+      color: var(--aurelion-gold);
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    
+    .btn-close {
+      filter: invert(1);
+      opacity: 0.8;
+    }
+  }
+  
+  .modal-body {
+    color: var(--aurelion-starlight);
+  }
+}
+
+.poem-content {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  text-align: center;
+  padding: 1rem;
+  
+  h1 {
+    color: var(--aurelion-gold);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .aurelion-hero {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .aurelion-visual {
+    margin-top: 2rem;
+    height: 300px;
+  }
+  
+  .aurelion-light-effect {
+    width: 200px;
+    height: 200px;
+    
+    .light-orb {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .light-rays {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  .poems-grid,
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .movement-title {
+    font-size: 1.8rem;
+  }
+}

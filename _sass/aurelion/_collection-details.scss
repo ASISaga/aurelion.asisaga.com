@@ -1,0 +1,42 @@
+// About the Collection Section
+.collection-details-section {
+  padding: 5rem 0;
+  background: var(--aurelion-midnight);
+}
+.analysis-heading {
+  color: var(--aurelion-gold);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 300;
+}
+.themes-section-heading,
+.form-section-heading {
+  color: var(--aurelion-light-gold);
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  font-weight: 400;
+}
+.analysis-narrative {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--aurelion-starlight);
+}
+.analysis-paragraph,
+.form-description {
+  margin-bottom: 1.5rem;
+}
+.thematic-elements-list {
+  list-style: none;
+  padding: 0;
+}
+.theme-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+.theme-item:last-child {
+  border-bottom: none;
+}
+.theme-item strong {
+  color: var(--aurelion-gold);
+}

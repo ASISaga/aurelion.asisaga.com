@@ -1,0 +1,78 @@
+// Poetry collection showcase styles
+.poetry-collection-showcase {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
+}
+.collection-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.poetic-movement {
+  margin-bottom: 4rem;
+}
+.movement-heading {
+  font-size: 2rem;
+  color: var(--aurelion-light-gold);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+}
+.movement-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: var(--aurelion-gradient-accent);
+}
+.poem-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.individual-poem-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+.individual-poem-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+.individual-poem-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--aurelion-gold);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+.individual-poem-card:hover::before {
+  left: 100%;
+}
+.poem-title {
+  color: var(--aurelion-gold);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.poem-opening-line {
+  color: var(--aurelion-starlight);
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 1rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,56 @@
+// Celestial Mentors Section
+.literary-influences-showcase {
+  padding: 5rem 0;
+  background: var(--aurelion-gradient-primary);
+}
+.influences-section-title {
+  font-size: 3rem;
+  color: var(--aurelion-gold);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+.influences-description {
+  font-size: 1.3rem;
+  color: var(--aurelion-silver);
+  font-style: italic;
+  opacity: 0.9;
+}
+.mentors-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.mentor-influence-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+.mentor-influence-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--aurelion-gold);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+.mentor-name {
+  color: var(--aurelion-gold);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.mentor-literary-role {
+  color: var(--aurelion-silver);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.mentor-contribution {
+  color: var(--aurelion-starlight);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}

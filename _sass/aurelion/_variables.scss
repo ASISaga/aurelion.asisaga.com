@@ -1,0 +1,21 @@
+// Color palette and keyframes
+:root {
+  --aurelion-gold: #FFD700;
+  --aurelion-light-gold: #FFF8DC;
+  --aurelion-deep-gold: #B8860B;
+  --aurelion-starlight: #E6E6FA;
+  --aurelion-cosmic-blue: #191970;
+  --aurelion-midnight: #000080;
+  --aurelion-silver: #C0C0C0;
+  --aurelion-gradient-primary: linear-gradient(135deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
+  --aurelion-gradient-accent: linear-gradient(135deg, var(--aurelion-gold) 0%, var(--aurelion-deep-gold) 100%);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

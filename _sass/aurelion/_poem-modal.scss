@@ -1,0 +1,36 @@
+// Modal for displaying full poems
+.modal-content-container {
+  background: var(--aurelion-midnight);
+  border: 1px solid var(--aurelion-gold);
+  border-radius: 15px;
+}
+.modal-header-section {
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+.modal-title-text {
+  color: var(--aurelion-gold);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.modal-close-button {
+  filter: invert(1);
+  opacity: 0.8;
+}
+.modal-body-section {
+  color: var(--aurelion-starlight);
+}
+.poem-full-text-display {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  text-align: center;
+  padding: 1rem;
+}
+.poem-full-text-display h1 {
+  color: var(--aurelion-gold);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}

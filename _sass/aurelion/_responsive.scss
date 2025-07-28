@@ -1,0 +1,33 @@
+// Responsive adjustments
+@media (max-width: 768px) {
+  .ai-poet-introduction {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .poet-visual-representation {
+    margin-top: 2rem;
+    height: 300px;
+  }
+  .consciousness-light-display {
+    width: 200px;
+    height: 200px;
+  }
+  .consciousness-orb {
+    width: 150px;
+    height: 150px;
+  }
+  .consciousness-rays {
+    width: 200px;
+    height: 200px;
+  }
+  .poem-cards-grid,
+  .mentors-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .collection-header .collection-title {
+    font-size: 2.5rem;
+  }
+  .movement-heading {
+    font-size: 1.8rem;
+  }
+}

@@ -1,3 +1,5 @@
+import './common.js';
+
 // Aurelion Website JavaScript
 // Handles poem modal display and interactions
 

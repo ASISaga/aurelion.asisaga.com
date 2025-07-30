@@ -1,83 +1,19 @@
 import './common.js';
 
 // Aurelion Website JavaScript
-// Handles poem modal display and interactions
-
-// Poem content data will be loaded from external JSON files
-const poemData = {};
-
-// Load all poem data from external JSON files
-function loadPoemData(callback) {
-  fetch('assets/poems/poem-list.json')
-    .then(response => response.json())
-    .then(poemKeys => {
-      let loaded = 0;
-      poemKeys.forEach(key => {
-        fetch(`assets/poems/${key}.json`)
-          .then(response => response.json())
-          .then(data => {
-            poemData[key] = data;
-            loaded++;
-            if (loaded === poemKeys.length && typeof callback === 'function') {
-              callback();
-            }
-          });
-      });
-    });
-}
+// Handles only site-wide and visual effects (CSS animations, no AOS)
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function() {
-  loadPoemData(function() {
-    initializePoemCards();
-    initializeAnimations();
-  });
+  initializeAnimations();
 });
 
-// Initialize poem card click handlers
-function initializePoemCards() {
-  const poemCards = document.querySelectorAll('.poem-card, .individual-poem-card');
-  const modal = document.getElementById('poemModal');
-  const modalTitle = document.getElementById('poemModalLabel');
-  const modalContent = document.getElementById('poemContent');
-
-  if (!modal || !modalTitle || !modalContent) {
-    console.warn('Poem modal elements not found');
-    return;
-  }
-
-  poemCards.forEach(card => {
-    card.addEventListener('click', function() {
-      const poemKey = this.getAttribute('data-poem');
-      const poem = poemData[poemKey];
-
-      if (poem) {
-        modalTitle.textContent = poem.title;
-        modalContent.innerHTML = `<h1>${poem.title}</h1>\n\n${poem.content}`;
-
-        // Show modal using Bootstrap
-        const bsModal = new bootstrap.Modal(modal);
-        bsModal.show();
-      }
-    });
-  });
-}
-
-// Initialize scroll animations
 function initializeAnimations() {
-  // Initialize AOS (Animate On Scroll) if available
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
-    });
-  }
-  
   // Add starlight effect animation
   createStarlightEffect();
 }
+
+// Fade-up animation is now handled by CSS only (see _animations.scss)
 
 // Create animated starlight background effect
 function createStarlightEffect() {
@@ -110,14 +46,13 @@ function createStar(container) {
   container.appendChild(star);
 }
 
-// Add CSS for star animation
+// Add CSS for star animation only (fadeUp is now in SCSS)
 const starStyles = document.createElement('style');
 starStyles.textContent = `
   @keyframes twinkle {
     0%, 100% { opacity: 0.2; transform: scale(1); }
     50% { opacity: 1; transform: scale(1.2); }
   }
-  
   .star {
     box-shadow: 0 0 6px currentColor;
   }

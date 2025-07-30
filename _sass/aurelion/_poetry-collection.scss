@@ -1,3 +1,22 @@
+// Link styles for poem cards
+.individual-poem-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 15px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.individual-poem-card-link:focus {
+  outline: 2px solid var(--aurelion-gold);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.2);
+}
+.individual-poem-card-link:hover .individual-poem-card,
+.individual-poem-card-link:focus .individual-poem-card {
+  transform: translateY(-5px);
+  border-color: var(--aurelion-gold);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
 // Poetry collection showcase styles
 .poetry-collection-showcase {
   padding: 5rem 0;

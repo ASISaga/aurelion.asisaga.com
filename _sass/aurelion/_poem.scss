@@ -1,3 +1,52 @@
+// Poetry collection link style
+.poetry-collection-link {
+  text-decoration: underline;
+  color: #0077cc;
+  transition: color 0.2s;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #0077cc;
+  border-radius: 0.25rem;
+  background: transparent;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+.poetry-collection-link:hover {
+  color: #005fa3;
+  border-color: #005fa3;
+  background: #f0f8ff;
+}
+// Poem page container styles
+.poem-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+// Back button style (if not already defined)
+.poem-back-btn {
+  font-weight: 600;
+}
+
+// Poem title style
+.poem-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #2d2d2d;
+}
+
+// Poem content style
+.poem-content {
+  font-size: 1.25rem;
+  color: #444;
+  margin-top: 2rem;
+}
 // Modal for displaying full poems
 .modal-content-container {
   background: var(--aurelion-midnight);

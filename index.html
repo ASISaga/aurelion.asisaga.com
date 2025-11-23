@@ -2,11 +2,21 @@
 layout: default
 title: "ASI Saga - Aurelion"
 ---
+<!--
+  Front matter above controls Jekyll layout and page title.
+  Keep the YAML front matter block (---) intact and above HTML.
+-->
 
+<!-- Main page container for Aurelion site content -->
 <main class="aurelion-container">
+  <!--
+    Section provides an accessible `aria-label` describing this page.
+    Contents are rendered by the `aurelion.html` include (Jekyll partial).
+  -->
   <section class="aurelion-section" aria-label="Aurelion - AI Poet and the Starlight Genesis Aria">
     <div class="aurelion-container-fluid">
       <div class="aurelion-main-row">
+        <!-- Jekyll include: renders the Aurelion component/partial -->
         {% include aurelion.html %}
       </div>
     </div>

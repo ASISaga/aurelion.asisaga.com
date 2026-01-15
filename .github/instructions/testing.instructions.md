@@ -28,7 +28,7 @@ This file defines testing responsibilities for agents and maintainers. Keep test
 
 - Contract: prompts are the sole mechanism for providing subdomain-specific inputs to generic MCP tests. A prompt should declare the input keys the MCP test expects and provide values or clear placeholders.
 - Typical input keys (recommended):
-	- subdomain: repository folder name (for example `businessinfinity.asisaga.com`)
+	- subdomain: repository folder name (for example `aurelion.asisaga.com`)
 	- baseUrl: preview URL or local dev URL used by Playwright checks (optional for static-only checks)
 	- includePaths: glob or list of `_includes` paths to scan
 	- scssPaths: glob for `/_sass` partials
@@ -50,16 +50,16 @@ Use a short, consistent template when creating or updating prompt files under `.
 - name: check-inline
 - description: "Check for inline assets and forbidden patterns in subdomain includes"
 - inputs:
-	subdomain: businessinfinity.asisaga.com
+	subdomain: aurelion.asisaga.com
 	includePaths: _includes/**/*.html
-	scssPaths: _sass/components/**/*.scss
+	scssPaths: _sass/aurelion/**/*.scss
 	gitRef: ${{PR_HEAD}}
 
 Tip: keep prompts small and focused; large orchestration should remain on the MCP server.
 
 ## Artifacts & reporting
 
-- Artifact naming: use the convention `{subdomain}-{check-name}-{gitRef}-{timestamp}.{ext}`. Example: `businessinfinity-check-inline-pr123-20251112T1530.json`.
+- Artifact naming: use the convention `{subdomain}-{check-name}-{gitRef}-{timestamp}.{ext}`. Example: `aurelion-check-inline-pr123-20251112T1530.json`.
 - Storage: MCP tests should upload important artifacts (axe/lighthouse HTML, Playwright screenshots, JSON findings) to the MCP artifact store and return URLs in the test output. For long-term records of gated failures, copy artifacts into `a11y-reports/` via a maintainer-approved process.
 - PR annotations: when MCP returns structured findings, Copilot should annotate the PR with file/line links and a short remediation suggestion. Warnings should not block merges unless surfaced as `fail` by the MCP test.
 

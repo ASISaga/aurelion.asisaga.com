@@ -1,10 +1,10 @@
 ---
 applyTo: "**/*.html,**/*.liquid,**/*.md,_includes/**,_layouts/**"
-description: "HTML and Jekyll/Liquid guidance for businessinfinity.asisaga.com: templates, includes, accessibility, and site-level coordination."
+description: "HTML and Jekyll/Liquid guidance for aurelion.asisaga.com: templates, includes, accessibility, and site-level coordination."
 ---
 
 # Subdomain & Theme Structure
-- This repo is the `businessinfinity.asisaga.com` subdomain. The canonical theme lives in `Website/theme.asisaga.com` and supplies `_layouts`, `_includes`, `_sass`, and shared `assets`.
+- This repo is the `aurelion.asisaga.com` subdomain. The canonical theme lives in `Website/theme.asisaga.com` and supplies `_layouts`, `_includes`, `_sass`, and shared `assets`.
 - Theme-provided head, navigation, and footer are authoritative across subdomains. Only override them when strictly necessary and documented.
 
 # File Locations & Conventions (HTML/Liquid)

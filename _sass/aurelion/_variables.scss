@@ -1,12 +1,3 @@
-// Color palette and keyframes
-:root {
-  --aurelion-gold: #FFD700;
-  --aurelion-light-gold: #FFF8DC;
-  --aurelion-deep-gold: #B8860B;
-  --aurelion-starlight: #E6E6FA;
-  --aurelion-cosmic-blue: #191970;
-  --aurelion-midnight: #000080;
-  --aurelion-silver: #C0C0C0;
-  --aurelion-gradient-primary: linear-gradient(135deg, var(--aurelion-cosmic-blue) 0%, var(--aurelion-midnight) 100%);
-  --aurelion-gradient-accent: linear-gradient(135deg, var(--aurelion-gold) 0%, var(--aurelion-deep-gold) 100%);
-}
+// Aurelion-specific semantic overrides
+// Use ontology tokens instead of custom colors
+// Theme tokens are inherited from ontology/index

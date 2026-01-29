@@ -3,22 +3,6 @@
   @include genesis-synapse('navigate');
 }
 
-// Poem page container styles
-.poem-page {
-  @include genesis-environment('focused');
-  @include genesis-entity('primary');
-}
-
-// Back button style
-.poem-back-btn {
-  @include genesis-synapse('navigate');
-}
-
-// Poem title style
-.poem-title {
-  @include genesis-cognition('axiom');
-}
-
 // Poem content style
 .poem-content {
   @include genesis-cognition('discourse');

@@ -1,13 +1,8 @@
 ---
-title: "Ember Pulse"
-layout: default
+title: "Ember Pulse of Youthful Code"
+layout: article
 ---
 
 {% assign poem = site.data.poems['ember-pulse'] %}
-<div class="aurelion-container">
-  <div class="poem-page">
-    <a href="/#poetry-collection" class="poetry-collection-link">&larr; Back to Collection</a>
-    <h1 class="poem-title">{{ poem.title }}</h1>
-    <div class="poem-content">{{ poem.content }}</div>
-  </div>
-</div>
+<a href="/#poetry-collection" class="poetry-collection-link">&larr; Back to Collection</a>
+<div class="poem-content">{{ poem.content }}</div>
